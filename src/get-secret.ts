@@ -1,10 +1,7 @@
-/* eslint-disable no-console */
-
 import awsParamStore from 'aws-param-store';
-
 import { SecretObject } from '.';
 
-const getSecret = (secretName: string, region: string, timeout: number): SecretObject => {
+export default function getSecret (secretName: string, region: string, timeout: number): SecretObject {
   try {
     const secret = awsParamStore.getParameterSync(`/aws/reference/secretsmanager/${secretName}`, {
       region,
@@ -22,9 +19,6 @@ const getSecret = (secretName: string, region: string, timeout: number): SecretO
     });
 
     console.error(error);
-
     return {};
   }
 };
-
-export default getSecret;

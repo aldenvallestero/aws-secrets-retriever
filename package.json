@@ -1,6 +1,6 @@
 {
   "name": "aws-secrets-retriever",
-  "version": "0.0.4",
+  "version": "0.1.1",
   "description": "Config loader with support for AWS Secrets Manager",
   "author": "Alden Vallestero <foggy_tenpin.02@icloud.com@icloud.com>",
   "main": "build/index.js",
